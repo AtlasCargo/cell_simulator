@@ -4,7 +4,8 @@ use std::path::Path;
 
 fn main() {
     let mut sim = Simulation::new(200);
-    let out_dir = Path::new("frontend/snapshots");
+    let out_dir = Path::new("../frontend/snapshots");
+
     fs::create_dir_all(out_dir).unwrap();
     for frame in 0..60 {
         sim.step();
